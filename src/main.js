@@ -23,20 +23,22 @@ logo.addEventListener("click", () => {
 
 </header>
 <main>
+<br>
   <div id="ingreso-post">
     <form class="formulario-post">
       <div class="imagen-post">
         <div class="fondo-avatar">
-            <img class="imagen-tamaño" src="" alt="avatar">
+            <img class="imagen-tamaño" src="user.png" alt="avatar">
         </div>
-        <textarea  class="textarea" name="post" id="post" cols="30" rows="3" placeholder="¡Publica tus novedades!"></textarea>
+        <textarea  class="textarea" name="post" id="post"placeholder="¡Publica tus novedades!"></textarea>
       </div>
       <div class="imagen-post">
           <button class="botones-post" id="publicar">Publicar</button>
+          <section class="lista-publicaciones"></section>
       </div>
     </form>
   </div>
-    <section id="lista-publicaciones"></section>
+<br>
 </main>
 <footer>
   <footer class="footer-color">
