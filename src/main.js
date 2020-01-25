@@ -12,8 +12,8 @@ logo.addEventListener("click", () => {
   next.innerHTML = `
 <header class="header-position">
   <div class="marca-header">
-    <div class="encabezado" style="margin-left:35%"><img src="logo-weservice.png" style="cursor: pointer; width:50%" alt="logo">
-    <a class="" id="cerrar-sesion" href=""><img class="img-header" src="close.png" alt="cerrar-sesión"></a>
+    <div class="encabezado" style="margin-left:35%"><img src="./img/logo-weservice.png" style="cursor: pointer; width:50%" alt="logo">
+    <a class="" id="cerrar-sesion" href=""><img class="img-header" src="./img/close.png" alt="cerrar-sesión"></a>
     </div>
   </div>
 
@@ -28,7 +28,7 @@ logo.addEventListener("click", () => {
     <form class="formulario-post">
       <div class="imagen-post">
         <div class="fondo-avatar">
-            <img class="imagen-tamaño" src="user.png" alt="avatar">
+            <img class="imagen-tamaño" src="./img/user.png" alt="avatar">
         </div>
         <textarea  class="textarea" name="post" id="post"placeholder="¡Publica tus novedades!"></textarea>
       </div>
@@ -43,9 +43,9 @@ logo.addEventListener("click", () => {
 <footer>
   <footer class="footer-color">
     <div class = "footer-opciones">
-      <a class="nav" href=""><img class="img-header"  src="like.png" alt="Publicaciones"></a>  
-      <a class="nav" href=""><img class="img-header"  src="chat-bubble.png" alt="Noticias"></a>  
-      <a class="nav" href=""><img class="img-header"  src="user.png" alt="Perfil"></a> 
+      <a class="nav" href=""><img class="img-header"  src="./img/like.png" alt="Publicaciones"></a>  
+      <a class="nav" href=""><img class="img-header"  src="./img/chat-bubble.png" alt="Noticias"></a>  
+      <a class="nav" href=""><img class="img-header"  src="./img/user.png" alt="Perfil"></a> 
     </div>
   </footer>
 </footer>
