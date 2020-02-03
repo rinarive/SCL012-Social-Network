@@ -23,7 +23,7 @@
  
 }
  //LOGIN CON FACEBOOK
-  export const loginFacebook = () => {
+  export const loginFacebook= () => {
   const provider = new firebase.auth.FacebookAuthProvider();
 
   firebase.auth().signInWithPopup(provider).then(function(result) {
