@@ -1,10 +1,8 @@
-# WeService
-
-![Logo](src/img/logo-weservice.png)
+[Logo](src/img/logo-weservice.png)
 
 "WeService" es una red social que permite interactuar en un contexto de prestación y consumo de servicios a domicilio.
 
-[Enlace Deploy WeService](https://red-social2020.firebaseapp.com/#/inicio)
+[WeService](https://red-social2020.firebaseapp.com/#/inicio)
 
 ## Índice
 
@@ -22,7 +20,7 @@ Esta red social le permite a un usuario registrado publicar servicios a domicili
 
 ## 2. Introducción a la aplicación
 Este sitio web es de **carácter interactivo**, corresponde a una red social que actúa como una comunidad donde personas que comparten intereses similiares dentro del mundo de los servicios a domicilio, puedan conectarse entre sí. 
-Le permite a un usuario-que requiere de un servicio a domicilio específico-buscar dentro de las publicaciones existentes sin necesidad de registrarse en la aplicación. Sin embargo, si desea contactar al prestador de servicio, debe obligatoriamente crearse una cuenta.
+Le permite a un usuario (que requiere de un servicio a domicilio específico), buscar dentro de las publicaciones existentes sin necesidad de tener un perfil completo en la aplicación.
 El usuario que quiera actuar como prestador de un servicio, debe estar registrado y mantener un perfil de usuario actualizado.
 
 ## 3. Definición del producto
