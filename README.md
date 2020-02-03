@@ -1,4 +1,4 @@
-[Logo](src/img/logo-weservice.png)
+![Logo](src/img/logo-weservice.png)
 
 "WeService" es una red social que permite interactuar en un contexto de prestación y consumo de servicios a domicilio.
 
