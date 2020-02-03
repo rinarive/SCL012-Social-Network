@@ -182,21 +182,55 @@ btnCloseSession.addEventListener ('click', () => {
 return containerWallPublications;
 };
 
-//funcion traer post
- export const getingPost = (textToPosted) => {
-  console.log('esta guardando' + textToPosted + 'to Firestore');
-  const contentMessage = document.getElementById('lista-publicaciones');
-  const collectionPost = database.collection('post')
-  const collectionPostForTime = collectionPost.orderBy("timePost","desc")
-  collectionPostForTime.onSnapshot((querySnapshot) =>{
-    querySnapshot.forEach((doc) =>{
-      console.log (doc.data());
-      contentMessage.innerHTML = `
 
-      <p id="postMessage">${doc.data().message}</p>
-      <h1>${doc. timePost} </h1>
-      
-      `
-  })
-})
-}  
+
+const templateEditPerfil = () =>{
+const editPerfil= document.getElementById('root');
+const contenEditPerfil = `
+
+<div class="muro">
+<header class="header-position">
+<div class="marca-header">
+  <div class="encabezado" style="margin-left:35%">
+    <img src="./img/logo-weservice.png" style="cursor: pointer; width:50%" alt="logo">
+    <a class="btnCloseSession" id="btnCloseSession" href="">
+      <img class="img-header" src="./img/close.png" alt="cerrar-sesión">
+    </a>
+  </div>
+</div>
+<form id='editPerfil'>
+<div class="mostrar">
+    <div class="containerEnter">
+     <p class="leter">Nombre: </p><input type="email" class="inputForm" id="nombre" placeholder="Ingresa email">
+     <p class="leter">Apellido: </p><input type="password" class="inputForm"  id="apellido" placeholder="Ingresa contraseña">
+     <p class="leter">Username: </p><input type="email" class="inputForm" id="username" placeholder="Ingresa email">
+     <p class="leter">Telefono: </p><input type="password" class="inputForm"  id="telefono" placeholder="Ingresa contraseña">
+     </div>
+<div class=>
+<select id='categorias'>
+<li>Belleza</li>
+<li>
+</select>
+
+
+
+
+</form>
+<footer>
+<footer class="footer-color">
+  <div class = "footer-opciones">
+    <a class="nav" href=""><img class="img-header"  src="./img/like.png" alt="Publicaciones"></a>  
+    <a class="nav" href=""><img class="img-header"  src="./img/chat-bubble.png" alt="Noticias"></a>  
+    <a class="nav" href=""><img class="img-header"  src="./img/user.png" alt="Perfil"></a> 
+  </div>
+</footer>
+</footer>
+</div>
+`
+
+
+
+
+
+
+}

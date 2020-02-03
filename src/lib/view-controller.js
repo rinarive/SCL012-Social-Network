@@ -23,7 +23,7 @@
   export function passIn(email2,password2){ // PARA INGRESAR
  
       firebase.auth().signInWithEmailAndPassword(email2, password2).catch(function(error) {
-        alert('Por favor inf=gresa tu correo y contraseña');
+        alert('Por favor ingresa tu correo y contraseña');
         let errorCode = error.code;
         let errorMessage = error.message;
   
