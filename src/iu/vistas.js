@@ -156,7 +156,7 @@ const contenWallPublications = `
   <div class = "footer-opciones">
     <a class="nav" href=""><img class="img-header"  src="./img/like.png" alt="Publicaciones"></a>  
     <a class="nav" href=""><img class="img-header"  src="./img/chat-bubble.png" alt="Noticias"></a>  
-    <a class="nav" href=""><img class="img-header"  src="./img/user.png" alt="Perfil"></a> 
+    <a class="nav" id="perfil" href="/#perfil"><img class="img-header"  src="./img/user.png" alt="Perfil"></a> 
   </div>
 </footer>
 </footer>
@@ -168,7 +168,8 @@ containerWallPublications.innerHTML = contenWallPublications;
 const btnCloseSession = document.getElementById('btnCloseSession');
 const textAreaPost = document.getElementById('post').value;
 const btnPublicar =document.getElementById('publicar');
-
+const perfil = document.getElementById('perfil');
+//perfil.addEventListener('click',templateEditPerfil());
 
 btnPublicar.addEventListener('click', () =>{
   const textToPosted = textAreaPost.value;
@@ -184,7 +185,8 @@ return containerWallPublications;
 
 
 
-const templateEditPerfil = () =>{
+/*export const templateEditPerfil = () =>{
+
 const editPerfil= document.getElementById('root');
 const contenEditPerfil = `
 
@@ -198,24 +200,38 @@ const contenEditPerfil = `
     </a>
   </div>
 </div>
+</header>
 <form id='editPerfil'>
 <div class="mostrar">
     <div class="containerEnter">
-     <p class="leter">Nombre: </p><input type="email" class="inputForm" id="nombre" placeholder="Ingresa email">
-     <p class="leter">Apellido: </p><input type="password" class="inputForm"  id="apellido" placeholder="Ingresa contraseña">
-     <p class="leter">Username: </p><input type="email" class="inputForm" id="username" placeholder="Ingresa email">
-     <p class="leter">Telefono: </p><input type="password" class="inputForm"  id="telefono" placeholder="Ingresa contraseña">
+     <p class="leter">Nombre: </p><input type="text" class="inputForm" id="nombre" placeholder="Ingresa email">
+     <p class="leter">Apellido: </p><input type="text" class="inputForm"  id="apellido" placeholder="Ingresa contraseña">
+     <p class="leter">Username: </p><input type="text" class="inputForm" id="username" placeholder="Ingresa email">
+     <p class="leter">Telefono: </p><input type="text" class="inputForm"  id="telefono" placeholder="Ingresa contraseña">
      </div>
-<div class=>
-<select id='categorias'>
-<li>Belleza</li>
-<li>
-</select>
+<div class= "forms">
 
+  <p class="leter">Categoria de servicios</p>
+    <select id='categorias'>
+      <li>Belleza</li>
+      <li>Hogar</li>
+      <li>Albañileria</li>
+      <li>automotriz<li>
+    </select>
+    <div id="cajaDescrip">
+      <p class = "leter">Descripcion del servicio</p>
+      <input type="text" class="imputForm" id="descripcion" placeholder"Escribe aca el servicio que ofreces">
+    </div>
 
-
-
+</div>
+  <div id="catalogo">
+    <img src="" id="cargarFotos">
+  </div>
+  <div>
+    <button class="botones-post" id="guardar">Guardar</button>
+  </div>
 </form>
+
 <footer>
 <footer class="footer-color">
   <div class = "footer-opciones">
@@ -225,12 +241,21 @@ const contenEditPerfil = `
   </div>
 </footer>
 </footer>
-</div>
 `
+editPerfil.innerHTML=contenEditPerfil;
+const nombre=document.getElementById("nombre").value;
+const apellido=document.getElementById("apellido").value;
+const username=document.getElementById("username").value;
+const telefono=document.getElementById("telefono").value;
+const descripcion=document.getElementById("descripcion").value;
+const guardar= document.getElementById("#guardar");
+
+guardar.addEventListener("click",()=>{
+  console/log('sirve');
+  //saveCollectionPerfil(nombre, apellido, username, telefono, descripcion);
+  //window.location.hash="/#muro";
 
 
-
-
-
-
-}
+});
+return templateEditPerfil;
+}*/

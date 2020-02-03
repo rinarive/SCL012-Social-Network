@@ -89,8 +89,7 @@ export function observer(){ 
         console.log (error);
       });
     }
-    
-
+    //cerrar sesion
     export function closeSession() {
       firebase.auth().signOut()  
         .then(() => {
@@ -100,4 +99,22 @@ export function observer(){ 
           console.log(error);
         });
     };
+    
+  
+  export function saveCollectionPerfil(nombre, apellido, username, telefono, descripcion){
+        database.collection('perfil').add({
+            nombre: nombre,
+            apellido:apellido,
+            username:username,
+            telefono:telefono,
+            descripcion:descripcion,
+        })
+      .then(docRef => {
+            console.log("Document written with ID: ", docRef.id);
+          })
+          .catch(error => {
+            console.error("Error adding document: ", error);
+          })
+  }
+
     

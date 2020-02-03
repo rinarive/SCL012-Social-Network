@@ -1,4 +1,4 @@
-import { templateLanding, templateRegisterUser, templateAccessUser, templateWallPublications } from '../iu/vistas.js';
+import { templateLanding, templateRegisterUser, templateAccessUser, templateWallPublications,/* templateEditPerfil*/ } from '../iu/vistas.js';
 
 window.addEventListener('load', templateLanding());
 
@@ -12,7 +12,9 @@ window.addEventListener('hashchange',function(){
   }else if(window.location.hash === '#/ingreso'){
     templateAccessUser();
   }else if(window.location.hash==='#/muro'){
-    templateWallPublications(posts)
+    templateWallPublications();
   }
-
 });
+/*else if(window.location.hash==='#/perfil'){
+    templateEditPerfil();
+  }*/
