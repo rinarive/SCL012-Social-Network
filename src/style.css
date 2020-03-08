@@ -1,7 +1,23 @@
 *{  margin:0px;
     padding: 0px;
     text-decoration: none;
-    box-sizing: border-box;
+   
+}
+#contenedor{
+    width: 50%;
+    height: 70%;
+  
+ 
+}
+#root{
+    width: 50%;
+    height: 80%;
+    border-radius:10px;
+    border: solid;
+    margin-left: 25%;
+    flex-flow: column;
+
+    
 }
 
 .containerEnter{
@@ -35,6 +51,13 @@
     height: 28.55px;
     left: 122.88px;
     background:rgba(196, 196, 196, 0.45);
+    border: none;
+    padding: 4px;
+   
+}
+#buttonsHome{
+    width: 40%;
+    height: 60%;
 }
 .btn-send{
     margin-left:135px;
@@ -55,6 +78,7 @@
     background: #FF8000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px; 
+    border: none;
 }
 .redes{
     width: 278.88px;
@@ -71,6 +95,7 @@
     font-weight: normal;
     font-size: 20px;
     color: #F2F2F2;
+    border: none;
 }
 .red-img{
     width: 35px;
@@ -80,12 +105,11 @@
 
 }
 .mostrar{
-    position: absolute;
+ 
     background: #f2f2f2;
     width: 329px;
-    height: 127px;
     display: grid;
-    margin-left: 45px;
+  
 }
 .inputForm{
     display: flex;
@@ -110,14 +134,16 @@
     color: #828282;   
 }
 #btnSignInUser{
-    margin-top: 80px;
+    margin-top: 60px;
 }
 .logo{
     cursor: pointer;
-    margin-left:100px;
-    margin-bottom: 0px;
-    resize: unset;
+    float: left;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 50px;
 }
+
 .btns{
     margin-left:100px;
     width: 50%;
@@ -146,7 +172,6 @@
     background-color:black ;
 }
 .text{
-    display: flex;
     font-family: 'Sarala', sans-serif;
     justify-content: center;
     flex-wrap: nowrap;
@@ -274,7 +299,7 @@ main{
 }
 
 
-  @media (min-width: 900px) and (max-width: 2600px) {
+ /* @media (min-width: 900px) and (max-width: 2600px) {
  
 .btns {
     width: 30%;
@@ -353,4 +378,4 @@ main{
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-  }
+  }*/

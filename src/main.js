@@ -15,6 +15,3 @@ window.addEventListener('hashchange',function(){
     templateWallPublications();
   }
 });
-/*else if(window.location.hash==='#/perfil'){
-    templateEditPerfil();
-  }*/
