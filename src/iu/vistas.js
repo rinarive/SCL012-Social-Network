@@ -2,26 +2,27 @@
 import { loginGoogle, loginFacebook, } from '../lib/controllerAuth.js';
 import { register, passIn, observer, closeSession } from '../lib/view-controller.js';
 import { sendingPost } from '../lib/initPost.js';
+import { localization } from '../map.js';
 //template inicio
 export const templateLanding = () => {
   window.location.hash = '#/inicio';
   const containerLanding = document.getElementById('root');
   const contentLanding = `
-<div id="contenedor">
-  <header class="time-service">
-    <img src="./img/time-service1.jpg" >
-  </header>
-  <div id="home"> 
+
+<header >
+  <img src="./img/time-service1.jpg" style="width: 100%; opacity: 70%;">
+</header>
+<div id="home"> 
   <div class="logo">
     <a href="#muro" id="logo" alt=""> <img src="./img/logo-weservice.png" style="cursor: pointer;"> </a>
-    <p class="text">¿Andas buscando un servicio?</p>
+    <h1 class="text">¿Andas buscando un servicio?</h1>
   </div>
-<div id= "buttonsHome">
+  <div id= "buttonsHome">
     <button class='btns' id="btnSignUp">Regístrate</button>
     <button class='btns' id="btnSignIn">ya tengo una cuenta</button>
-</div>
+  </div>
 </div>    
-</div>
+
   `;
   containerLanding.innerHTML = contentLanding;
 
@@ -45,25 +46,32 @@ export const templateRegisterUser = () => {
   window.location.hash = '#/registro';
   const containerRegisterUser = document.getElementById('root');
   const contentRegisterUser = 
-  `<div class="register">
-  <header class="header-position">
+`
+<div>
+<header class="header-position">
   <div class="marca-header">
     <div class="encabezado" style="margin-left:35%">
       <img src="./img/logo-weservice.png" style="cursor: pointer; width:50%" alt="logo">
     </div>
   </div>
-  </header>
+</header>
+<div id="home">
   <form class= 'formulario'>
-      <p class='leter-form'>Registro</p>
+      <h1 class='leter-form'>Registro</h1>
+    <main>
       <p class='leter-form'>Nombre:<input type='name' class='forms'id='name' placeholder='  Ingresa tu Nombre'></p>
       <p class='leter-form'>Apellido:<input type='lastName' class='forms' id='lastName' placeholder='  Ingresa tu Apellido'></p>
       <p class='leter-form'>Email:<input type='email' id='email'class='forms' placeholder='  Ingresa email'></p>
       <p class='leter-form'>Contraseña:<input type='password'class='forms' id='password' placeholder='  Ingresa contraseña'></p>
       <button  class='btn-send' id='btnSignUpUser'>Enviar</button>
+     <div id="buttonsHome">
       <button class='redes' id='btnLoginGoogle'> <img class='red-img' src="./img/google.png" >ingresa con Google</button>
-      <button class='redes' id='btnLoginFacebook'> <img class='red-img' src="./img/ll.png" >ingresa con Facebook</button>   
+      <button class='redes' id='btnLoginFacebook'> <img class='red-img' src="./img/ll.png" >ingresa con Facebook</button> 
+     </div>    
+    </main>
   </form>
-  </div>
+</div>
+</div> 
   `;
   containerRegisterUser.innerHTML = contentRegisterUser;
 
@@ -94,10 +102,10 @@ export const templateAccessUser = () => {
   window.location.hash = '#/ingreso';
   const containerAccessUser = document.getElementById('root');
   const contenAccessUser = `
-<div id = "contenedor"
- <div class="time-service">
-    <img src="./img/time-service1.jpg" style="width: 100%; opacity: 70%;">
-  </div>
+<header >
+  <img src="./img/time-service1.jpg" style="width: 100%; opacity: 70%;">
+</header>
+<div id="home"> 
   <div class="logo">
     <a href="#muro" id="logo" alt=""> <img src="./img/logo-weservice.png" style="cursor: pointer;"> </a>
   </div>
@@ -107,9 +115,10 @@ export const templateAccessUser = () => {
      <p class="leter">Contraseña: </p><input type="password" class="inputForm"  id="password2" placeholder="Ingresa contraseña">
     </div>
   <div id="btnSignInUser">
-  <button class="btns" >Ingresar</button>
+    <button class="btns" >Ingresar</button>
   </div>
-  </div>`;
+ </div> 
+`;
 
   containerAccessUser.innerHTML = contenAccessUser;
   const btnSignInUser = document.getElementById("btnSignInUser");
@@ -167,7 +176,7 @@ export const templateWallPublications = () => {
   <div class = "footer-opciones">
     <a class="nav" href=""><img class="img-header"  src="./img/like.png" alt="Publicaciones"></a>  
     <a class="nav" href=""><img class="img-header"  src="./img/chat-bubble.png" alt="Noticias"></a>  
-    <a class="nav" id="perfil" href="/#perfil"><img class="img-header"  src="./img/user.png" alt="Perfil"></a> 
+    <a class="nav" id="perfil" href="/#localizacion"><img class="img-header"  src="./img/user.png" alt="localizacion"></a> 
   </div>
 </footer>
 </footer>
@@ -180,7 +189,10 @@ export const templateWallPublications = () => {
   const textAreaPost = document.getElementById('post').value;
   const btnPublicar = document.getElementById('publicar');
   const perfil = document.getElementById('perfil');
-  //perfil.addEventListener('click',templateEditPerfil());
+ perfil.addEventListener('click', ()=>{
+    localization ();
+  })
+  
 
   btnPublicar.addEventListener('click', () => {
     const textToPosted = textAreaPost.value;
@@ -196,8 +208,8 @@ export const templateWallPublications = () => {
 
 
 
-/*export const templateEditPerfil = () =>{
-
+export const templateEditPerfil = () =>{
+  window.location.hash = '#/perfil';
 const editPerfil= document.getElementById('root');
 const contenEditPerfil = `
 
@@ -269,4 +281,4 @@ guardar.addEventListener("click",()=>{
 
 });
 return templateEditPerfil;
-}*/
+}

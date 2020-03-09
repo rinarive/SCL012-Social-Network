@@ -1,5 +1,5 @@
-import { templateLanding, templateRegisterUser, templateAccessUser, templateWallPublications,/* templateEditPerfil*/ } from '../iu/vistas.js';
-
+import { templateLanding, templateRegisterUser, templateAccessUser, templateWallPublications, /*templateEditPerfil */} from '../iu/vistas.js';
+//import{ localization } from './map.js'
 window.addEventListener('load', templateLanding());
 
 //MANEJANDO LAS RUTAS
@@ -14,4 +14,8 @@ window.addEventListener('hashchange',function(){
   }else if(window.location.hash==='#/muro'){
     templateWallPublications();
   }
+
 });
+/*else if(window.location.hash==='#/perfil'){
+  templateEditPerfil();
+}*/
